@@ -1,5 +1,6 @@
 import classes from './MealItem.module.css';
 import react from 'react';
+import MealItemForm from './MealItemForm';
 
 
 const MealItem = props=>{
@@ -14,6 +15,7 @@ const MealItem = props=>{
             
             </div>
             <div>
+                <MealItemForm/>
 
             </div>
         </li>
