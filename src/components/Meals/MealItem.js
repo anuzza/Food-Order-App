@@ -1,5 +1,5 @@
 import classes from './MealItem.module.css';
-import react from 'react';
+import React from 'react';
 import MealItemForm from './MealItemForm';
 import react, {useContext} from 'react';
 import CartContext from '../../store/cart-context';
