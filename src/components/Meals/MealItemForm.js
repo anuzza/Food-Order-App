@@ -16,10 +16,12 @@ const MealItemForm = props=>{
 
         const enteredAmountNumber = +enteredAmount;
 
-        if(enteredAmount.trim().length===0|| enteredAmount <1 || enteredAmount >5){
+        if(enteredAmountNumber.trim().length===0|| enteredAmountNumber <1 || enteredAmountNumber >5){
             setAmountIsValid(false);
             return;
         }
+
+        props.onAddToCart(enteredAmountNumber);
 
     };
 
@@ -37,7 +39,7 @@ const MealItemForm = props=>{
                 defaultValue: '1',
 
             }}/>
-            <button>+ Add</button>
+            <button>+Add</button>
             {!amountIsValid && <p>Please, enter a valid amount(1-5)</p>}
         </form>
 
