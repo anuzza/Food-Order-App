@@ -16,6 +16,7 @@ const cartReducer =(state, action)=>{
        
         const existingCartItem = state.item[existingCartItemIndex];
 
+        //getting rid of same item names in the cart
       
         let updatedItems;
 
@@ -30,10 +31,7 @@ const cartReducer =(state, action)=>{
         }else{
             updatedItems= state.item.concat(action.item);
 
-        }
-
-
-        
+        }      
         
        
         
