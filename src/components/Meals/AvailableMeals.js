@@ -8,8 +8,10 @@ import { useEffect, useState } from 'react';
 const AvailableMeals = ()=>{
 
   const [meals, setMeals] = useState([]);
+  const [isLoading, setisLoading] = useState(true);
 
   useEffect(()=>{
+    setisLoading(true);
 
     const fetchMeals = async()=>{
 
@@ -29,6 +31,8 @@ const AvailableMeals = ()=>{
       }
 
       setMeals(loadedMeals);
+      setisLoading(false);
+
 
 
 
@@ -40,7 +44,12 @@ const AvailableMeals = ()=>{
 
   }, []);
 
-  
+  if(isLoading){
+    return(<section>
+      <p className={classes.MealsLoading}>Loading...</p>
+    </section>)
+
+  };
 
 
 
